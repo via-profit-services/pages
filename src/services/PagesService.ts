@@ -1,7 +1,6 @@
 import type {
   PagesServiceProps,
   PagesService as PagesServiceInterface,
-  TemplatesMap,
   DraftJsContentState,
   ContentBlock,
   JSONValue,
@@ -9,7 +8,6 @@ import type {
 
 class PagesService implements PagesServiceInterface {
   private props: PagesServiceProps;
-  private templatesMap: TemplatesMap;
 
   public constructor(props: PagesServiceProps) {
     this.props = props;

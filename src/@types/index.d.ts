@@ -264,24 +264,7 @@ declare module '@via-profit-services/pages' {
 
   export class PagesService {
     constructor(props: PagesServiceProps);
-    // public registerTemplates(templates: TemplatesMap): Promise<void>;
     public draftJsRawToGraphQL(draftJsRaw: DraftJsContentState | null): DraftJsContentState;
-    // public getPagesList(filter: OutputFilter): Promise<ListResponse<Page>>;
-    // public getPagesListByIds(ids: readonly string[]): Promise<Page[]>;
-    // public getPageListByUrls(urls: readonly string[]): Promise<Page[]>;
-    // public getPageById(id: string): Promise<Page | false>;
-    // public getAppBarMenu(): Promise<AppBarMenu>;
-    // public getContentBlocksList(filter: OutputFilter): Promise<ListResponse<ContentBlock>>;
-    // public getContentBlocksByIds(ids: readonly string[]): Promise<ContentBlock[]>;
-    // public getContentBlocksByPageTemplate(
-    //   props: ContentBlocksByPageTemplateProps,
-    // ): Promise<ContentBlock[]>;
-    // public createContentBlock(data: CreateContentBlockProps): Promise<string>;
-    // public updateContentBlock(id: string, data: UpdateContentBlockProps): Promise<void>;
-    // public deleteContentBlocks(ids: string[]): Promise<void>;
-    // public getContentBlockNodesByPseudoIds(
-    //   pseudoIds: readonly string[],
-    // ): Promise<ContentBlockPseudos[]>;
     public contentBlocksArrayToObject<K extends string>(
       blocks: ContentBlock[],
       keys: K[],
