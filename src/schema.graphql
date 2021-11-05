@@ -1,0 +1,131 @@
+input PagesContentBlockCreateInput {
+  id: ID!
+  page: ID!
+  template: PageTemplateName!
+  name: String!
+  content: JSON!
+}
+
+input PagesContentBlockUpdateInput {
+  page: ID
+  template: PageTemplateName
+  name: String
+  content: JSON
+}
+
+type PagesCreateContentBlockPayload {
+  query: Query!
+  contentBlock: ContentBlock!
+}
+
+type PagesUpdateContentBlockPayload {
+  query: Query!
+  contentBlock: ContentBlock!
+}
+
+type PagesDeleteContentBlockPayload {
+  query: Query!
+  deletedContentBlockIDs: [ID!]!
+}
+
+type ContentBlock {
+  id: ID!
+  name: String!
+  page: Page!
+  template: PageTemplate!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  content: JSON!
+}
+
+type ContentSecurityPolicyMap {
+  defaultSrc: String!
+  styleSrc: String!
+  fontSrc: String!
+  scriptSrcElem: String!
+  scriptSrc: String!
+  imgSrc: String!
+  connectSrc: String!
+  frameSrc: String!
+  childSrc: String!
+}
+
+type PageMeta {
+  title: String!
+  description: String!
+  keywords: String!
+}
+
+type Page implements Node {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  url: String!
+  template: PageTemplate!
+  contentSecurityPolicy: ContentSecurityPolicyMap!
+  availability: PageAvailability!
+  meta: PageMeta!
+}
+
+
+interface PageTemplateNode {
+  id: ID!
+  # appMenu: AppBarMenu!
+  page: Page!
+}
+
+type DraftJsContent {
+  blocks: [DraftJsContentBlock!]!
+  entityMap: JSONObject!
+}
+
+enum PageAvailability {
+  available
+  unavailable
+}
+
+enum DraftJsContentBlockType {
+  UNSTYLED
+  PARAGRAPH
+  HEADER_ONE
+  HEADER_TWO
+  HEADER_THREE
+  HEADER_FOUR
+  HEADER_FIVE
+  HEADER_SIX
+  UNORDERED_LIST_ITEM
+  ORDERED_LIST_ITEM
+  BLOCKQUOTE
+  CODE_BLOCK
+  ATOMIC
+}
+
+enum DraftJsContentInlineStyleType {
+  BOLD
+  CODE
+  ITALIC
+  STRIKETHROUGH
+  UNDERLINE
+}
+
+type DraftJsContentEntityRange {
+  key: Int!
+  offset: Int!
+  length: Int!
+}
+
+type DraftJsContentInlineStyleRange {
+  style: DraftJsContentInlineStyleType!
+  offset: Int!
+  length: Int!
+}
+
+type DraftJsContentBlock {
+  key: String!
+  type: DraftJsContentBlockType!
+  text: String!
+  depth: Int!
+  inlineStyleRanges: [DraftJsContentInlineStyleRange!]!
+  entityRanges: [DraftJsContentEntityRange!]!
+  data: JSONObject
+}

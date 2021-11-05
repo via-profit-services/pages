@@ -1,0 +1,3 @@
+extend type Query {
+  resolvePage(url: String): Page!
+}

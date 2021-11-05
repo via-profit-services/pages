@@ -1,0 +1,4 @@
+type TemplateFallback implements PageTemplateNode {
+  id: ID!
+  page: Page!
+}

@@ -1,0 +1,22 @@
+type TemplateHome implements PageTemplateNode {
+  id: ID!
+  page: Page!
+  slider: HomeSlider!
+  h1: String!
+  content: DraftJsContent!
+}
+
+type HomeSlider {
+  settings: HomeSliderSettings!
+  slides: [HomeSliderSlide!]!
+}
+
+type HomeSliderSettings {
+  autoplay: Boolean!
+  delay: Int!
+}
+
+type HomeSliderSlide {
+  id: ID!
+  image: JSON!
+}

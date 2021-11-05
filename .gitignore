@@ -1,0 +1,33 @@
+/node_modules/
+/.env
+/log
+/sessions
+
+/public
+
+# jest
+/coverage
+
+# webpack temporary dir
+/build
+
+/dist
+
+# jwt keys
+/keys
+
+# Redis sump
+/dump.rdb
+
+/sessions
+/package.tgz
+/package-*.tgz
+
+.yarn/*
+!.yarn/plugins
+!.yarn/versions
+
+/public
+/.env
+/.knex/.env
+/.knex/knexfile.js

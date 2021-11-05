@@ -1,0 +1,6 @@
+type TemplateSecond implements PageTemplateNode {
+  id: ID!
+  page: Page!
+  h1: String!
+  content: DraftJsContent!
+}
