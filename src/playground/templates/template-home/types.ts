@@ -15,7 +15,7 @@ export type HomeSlider = {
 
 export type TemplateHome = PageTemplateNode & {
   h1: string;
-  slider: HomeSlider;
+  slider: HomeSlider | null;
   content: DraftJsContentState;
 };
 

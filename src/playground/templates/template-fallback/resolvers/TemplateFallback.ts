@@ -17,37 +17,3 @@ const fallbackPageResolver: Resolvers['TemplateFallback'] = fieldBuilder(
 );
 
 export default fallbackPageResolver;
-
-// const resolver = new Proxy<TemplateFallbackResolver>(
-//   {
-//     id: () => ({}),
-//     page: () => ({}),
-//     appMenu: () => ({}),
-//   },
-//   {
-//     get: (_target, prop: keyof TemplateFallbackResolver) => {
-//       const resolver: TemplateFallbackResolver[keyof TemplateFallbackResolver] = async (
-//         parent,
-//         _args,
-//         _context,
-//       ) => {
-//         const { pageID } = parent;
-//         const template: TemplateFallback = {
-//           id: 'TemplateFallback',
-//           page: {
-//             id: pageID,
-//           },
-//           appMenu: {
-//             navigation: [],
-//           },
-//         };
-
-//         return template[prop];
-//       };
-
-//       return resolver;
-//     },
-//   },
-// );
-
-// export default resolver;

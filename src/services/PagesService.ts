@@ -27,8 +27,8 @@ class PagesService implements PagesServiceInterface {
     return records;
   }
 
-  public draftJsRawToGraphQL(draftJsRaw: DraftJsContentState): DraftJsContentState {
-    const { blocks, entityMap } = draftJsRaw;
+  public draftJsRawToGraphQL(draftJsRaw: DraftJsContentState | null): DraftJsContentState {
+    const { blocks, entityMap } = draftJsRaw || { blocks: [], entityMap: {} };
 
     return {
       entityMap: entityMap || {},

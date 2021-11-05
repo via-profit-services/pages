@@ -2,5 +2,5 @@ type TemplateContact implements PageTemplateNode {
   id: ID!
   page: Page!
   h1: String!
-  address: String!
+  content: DraftJsContent!
 }

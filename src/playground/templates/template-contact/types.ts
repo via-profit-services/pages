@@ -1,10 +1,10 @@
 import { Context } from '@via-profit-services/core';
-import { PageTemplateNode } from '@via-profit-services/pages';
+import { PageTemplateNode, DraftJsContentState } from '@via-profit-services/pages';
 import { GraphQLFieldResolver } from 'graphql';
 
 export type TemplateContacts = PageTemplateNode & {
   h1: string;
-  address: string;
+  content: DraftJsContentState;
 };
 
 export type Resolvers = {

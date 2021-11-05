@@ -265,7 +265,7 @@ declare module '@via-profit-services/pages' {
   export class PagesService {
     constructor(props: PagesServiceProps);
     // public registerTemplates(templates: TemplatesMap): Promise<void>;
-    public draftJsRawToGraphQL(draftJsRaw: DraftJsContentState): DraftJsContentState;
+    public draftJsRawToGraphQL(draftJsRaw: DraftJsContentState | null): DraftJsContentState;
     // public getPagesList(filter: OutputFilter): Promise<ListResponse<Page>>;
     // public getPagesListByIds(ids: readonly string[]): Promise<Page[]>;
     // public getPageListByUrls(urls: readonly string[]): Promise<Page[]>;

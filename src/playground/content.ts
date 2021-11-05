@@ -1,0 +1,191 @@
+import { ContentBlock, Page } from '@via-profit-services/pages';
+
+export const pages: Page[] = [
+  {
+    id: '503a52b5-6c6b-44b7-b6e0-fbee3d4d6642',
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    url: '/',
+    template: 'TemplateHome',
+    availability: 'available',
+    meta: {
+      description: 'Home page description',
+      title: 'Home page title',
+      keywords: '',
+    },
+  },
+  {
+    id: '770f1b27-bf0a-4baf-940f-e8410d1a3cba',
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    url: '/contact',
+    template: 'TemplateContact',
+    availability: 'available',
+    meta: {
+      description: 'Contact page description',
+      title: 'Contact page title',
+      keywords: '',
+    },
+  },
+  {
+    id: 'a9b42a09-cc31-450e-b971-cbbc9f67eb9e',
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    url: '/about',
+    template: 'TemplateSecond',
+    availability: 'available',
+    meta: {
+      description: 'About page description',
+      title: 'About page title',
+      keywords: '',
+    },
+  },
+  {
+    id: '2647aadf-4340-4691-b1a1-fd6d68dac441',
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    url: '/404',
+    template: 'TemplateFallback',
+    availability: 'available',
+    meta: {
+      description: '404 description',
+      title: '404 title',
+      keywords: '',
+    },
+  },
+];
+
+export const contentBlocks: ContentBlock[] = [
+  {
+    id: 'c477425a-46e6-4eb0-92e9-620acd059389',
+    name: 'h1',
+    page: '503a52b5-6c6b-44b7-b6e0-fbee3d4d6642',
+    template: 'TemplateHome',
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    content: 'Home page <h1>',
+  },
+  {
+    id: '679ffbf5-da5f-4f6d-bfd6-8d57faecd6e7',
+    name: 'content',
+    page: '503a52b5-6c6b-44b7-b6e0-fbee3d4d6642',
+    template: 'TemplateHome',
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    content: {
+      blocks: [
+        {
+          key: 'fiaa2',
+          text: 'Home page content from draft-js',
+          type: 'unstyled',
+          depth: 0,
+          inlineStyleRanges: [{ offset: 0, length: 4, style: 'BOLD' }],
+          entityRanges: [],
+          data: {},
+        },
+      ],
+      entityMap: {},
+    },
+  },
+  {
+    id: 'e5e0a18e-0b35-40e6-a41d-a46167485a60',
+    name: 'slider',
+    page: '503a52b5-6c6b-44b7-b6e0-fbee3d4d6642',
+    template: 'TemplateHome',
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    content: {
+      slides: [],
+      settings: {
+        autoplay: true,
+        delay: 3000,
+      },
+    },
+  },
+  {
+    id: 'b21b7333-c355-4218-aea5-2a53119f5203',
+    name: 'h1',
+    page: '770f1b27-bf0a-4baf-940f-e8410d1a3cba',
+    template: 'TemplateContact',
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    content: 'Owr contact',
+  },
+  {
+    id: 'b21b7333-c355-4218-aea5-2a53119f5203',
+    name: 'content',
+    page: '770f1b27-bf0a-4baf-940f-e8410d1a3cba',
+    template: 'TemplateContact',
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    content: {
+      blocks: [
+        {
+          key: 'fiaa2',
+          text: 'Вы можете связаться с нами по телефонам:',
+          type: 'unstyled',
+          depth: 0,
+          inlineStyleRanges: [],
+          entityRanges: [],
+          data: {},
+        },
+        {
+          key: 'a5fqq',
+          text: '+7 (343) 201-98-80',
+          type: 'unstyled',
+          depth: 0,
+          inlineStyleRanges: [],
+          entityRanges: [{ offset: 0, length: 18, key: 0 }],
+          data: {},
+        },
+        {
+          key: '48gfu',
+          text: 'Адрес: г. Екатеринбург, ул. Волховская, 20, оф. 423',
+          type: 'unstyled',
+          depth: 0,
+          inlineStyleRanges: [{ offset: 0, length: 5, style: 'BOLD' }],
+          entityRanges: [],
+          data: {},
+        },
+      ],
+      entityMap: {
+        0: {
+          type: 'LINK',
+          mutability: 'MUTABLE',
+          data: { href: 'tel:+73432019880', url: 'tel:+73432019880' },
+        },
+      },
+    },
+  },
+  {
+    id: '4dddaad6-0fcd-46bc-935c-025519aacb29',
+    name: 'h1',
+    page: 'a9b42a09-cc31-450e-b971-cbbc9f67eb9e',
+    template: 'TemplateSecond',
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    content: 'About',
+  },
+  {
+    id: '4a1bdae8-05c2-4fcd-be76-954ad7f2883e',
+    name: 'content',
+    page: 'a9b42a09-cc31-450e-b971-cbbc9f67eb9e',
+    template: 'TemplateSecond',
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    content: {
+      blocks: [
+        {
+          key: 'fiaa2',
+          text: 'Web development',
+          type: 'unstyled',
+          depth: 0,
+          inlineStyleRanges: [],
+          entityRanges: [],
+          data: {},
+        },
+      ],
+      entityMap: {},
+    },
+  },
+];
